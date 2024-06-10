@@ -1,0 +1,393 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8AC2F6DA-0A75-4213-8C75-E4A4C97F812D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>pos02</RootNamespace>
+    <AssemblyName>pos02</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="Guna.UI2, Version=2.0.4.4, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
+      <HintPath>..\packages\Guna.UI2.WinForms.2.0.4.4\lib\net472\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BillPrint.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BillPrint.Designer.cs">
+      <DependentUpon>BillPrint.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cashier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cashier.Designer.cs">
+      <DependentUpon>Cashier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Kitchen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Kitchen.Designer.cs">
+      <DependentUpon>Kitchen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainClass.cs" />
+    <Compile Include="Manager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manager.Designer.cs">
+      <DependentUpon>Manager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\CategoryAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Model\CategoryAdd.Designer.cs">
+      <DependentUpon>CategoryAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\frmPOS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Model\frmPOS.Designer.cs">
+      <DependentUpon>frmPOS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Message.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Model\Message.Designer.cs">
+      <DependentUpon>Message.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\ProductAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Model\ProductAdd.Designer.cs">
+      <DependentUpon>ProductAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Purchase .cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Model\Purchase .Designer.cs">
+      <DependentUpon>Purchase .cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Register.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Model\ucProduct.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Model\ucProduct.Designer.cs">
+      <DependentUpon>ucProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Model\Registercs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Model\Registercs.Designer.cs">
+      <DependentUpon>Registercs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Billreport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Billreport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SampleAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SampleAdd.Designer.cs">
+      <DependentUpon>SampleAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SampleViwe1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SampleViwe1.Designer.cs">
+      <DependentUpon>SampleViwe1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="shopDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>shopDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="UserLogName.cs" />
+    <Compile Include="Viwe\Bill List.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viwe\Bill List.Designer.cs">
+      <DependentUpon>Bill List.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viwe\CategoryViwe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viwe\CategoryViwe.Designer.cs">
+      <DependentUpon>CategoryViwe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viwe\Dashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viwe\Dashboard.Designer.cs">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viwe\Kitchen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viwe\Kitchen.Designer.cs">
+      <DependentUpon>Kitchen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viwe\ProductViwe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viwe\ProductViwe.Designer.cs">
+      <DependentUpon>ProductViwe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viwe\Saleviwe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viwe\Saleviwe.Designer.cs">
+      <DependentUpon>Saleviwe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Viwe\StaffViwe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Viwe\StaffViwe.Designer.cs">
+      <DependentUpon>StaffViwe.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="BillPrint.resx">
+      <DependentUpon>BillPrint.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cashier.resx">
+      <DependentUpon>Cashier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Kitchen.resx">
+      <DependentUpon>Kitchen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manager.resx">
+      <DependentUpon>Manager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Model\CategoryAdd.resx">
+      <DependentUpon>CategoryAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Model\frmPOS.resx">
+      <DependentUpon>frmPOS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Model\Message.resx">
+      <DependentUpon>Message.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Model\ProductAdd.resx">
+      <DependentUpon>ProductAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Model\Purchase .resx">
+      <DependentUpon>Purchase .cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Model\ucProduct.resx">
+      <DependentUpon>ucProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Model\Registercs.resx">
+      <DependentUpon>Registercs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Billreport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Billreport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SampleAdd.resx">
+      <DependentUpon>SampleAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SampleViwe1.resx">
+      <DependentUpon>SampleViwe1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viwe\Bill List.resx">
+      <DependentUpon>Bill List.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viwe\CategoryViwe.resx">
+      <DependentUpon>CategoryViwe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viwe\Dashboard.resx">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viwe\Kitchen.resx">
+      <DependentUpon>Kitchen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viwe\ProductViwe.resx">
+      <DependentUpon>ProductViwe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viwe\Saleviwe.resx">
+      <DependentUpon>Saleviwe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Viwe\StaffViwe.resx">
+      <DependentUpon>StaffViwe.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="shopDataSet.xsc">
+      <DependentUpon>shopDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="shopDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>shopDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="shopDataSet.xss">
+      <DependentUpon>shopDataSet.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1680846245164.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1681136950931.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1681146286380.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1681147056065.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1681146846436.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1680839720851.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\docter.png" />
+    <None Include="Resources\WhatsApp Image 2023-04-07 at 09.14.34.jpeg" />
+    <None Include="Resources\3d-kid-ninja-stance-cartoon-vector.jpg" />
+    <None Include="Resources\swallowed star.jpeg" />
+    <None Include="Resources\1682147508640.png" />
+    <None Include="Resources\recycle-bin.png" />
+    <None Include="Resources\black-search-icon-png-9.jpg" />
+    <None Include="Resources\1682148018189.png" />
+    <None Include="Resources\1684687418700.png" />
+    <None Include="Resources\1680843365535.png" />
+    <None Include="Resources\1680846657987.png" />
+    <None Include="Resources\1680843594009.png" />
+    <None Include="Resources\1680844858476.png" />
+    <None Include="Resources\1680841646835.png" />
+    <None Include="Resources\printer.png" />
+    <None Include="Resources\1688056566177.png" />
+    <None Include="Resources\addbtn.png" />
+    <None Include="Resources\white-home-icon.jpg" />
+    <None Include="Resources\order.png" />
+    <Content Include="shop.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="shop_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>shop.mdf</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
